@@ -1,0 +1,13 @@
+<p>
+  todo works!
+
+  Task Manager
+</p>
+Task:<input type="text"[(ngModel)]="sometask">
+<button (click)="addtask()">Add Task</button>
+
+<ul>
+  <li *ngFor = "let t of tasklist ; let currentask=index">
+    {{t}} <button (click)="deletetask(currentask)">delete</button>
+  </li>
+</ul>
